@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">rickAndMortyApp</string>
+    <string name="filter_genderm">Male</string>
+    <string name="filter_genderfm">Female</string>
+    <string name="filter_gendergl">Genderless</string>
+    <string name="species">Species</string>
+    <string name="status">Status</string>
+    <string name="alive">Alive</string>
+    <string name="dead">Dead</string>
+    <string name="unknow">Unknown</string>
+    <string name="species1">Humans</string>
+    <string name="species2">Clones</string>
+    <string name="species3">Cyborgs</string>
+    <string name="species4">Wampires</string>
+    <string name="species5">Robots</string>
+    <string name="species6">Mythologs</string>
+    <string name="species7">Alien</string>
+    <string name="species8">Alien Parasites</string>
+    <string name="buton">Apply</string>
+    <string name="Filter">Filter By Name</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

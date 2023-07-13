@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rickandmorty_graph"
+    app:startDestination="@id/cardFragment">
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.rickandmortyapp.view.CardFragment"
+        android:label="CardFragment" >
+        <action
+            android:id="@+id/action_cardFragment_to_cardDetailFragment"
+            app:destination="@id/cardDetailFragment" />
+        <action
+            android:id="@+id/action_cardFragment_to_filterFragment3"
+            app:destination="@id/filterFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardDetailFragment"
+        android:name="com.rickandmortyapp.view.CardDetailFragment"
+        android:label="CardDetailFragment" >
+        <argument
+            android:name="cardid"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment3"
+        android:name="com.rickandmortyapp.view.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment3_to_mainActivity3"
+            app:destination="@id/mainActivity3" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity3"
+        android:name="com.rickandmortyapp.MainActivity"
+        android:label="MainActivity" />
+</navigation>
