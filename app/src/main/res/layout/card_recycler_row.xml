@@ -6,7 +6,7 @@
     <data>
         <variable
             name="charModel"
-            type="com.rickandmortyapp.model.CharacterList" />
+            type="com.rickandmortyapp.model.kk.CharacterList" />
     </data>
 
 

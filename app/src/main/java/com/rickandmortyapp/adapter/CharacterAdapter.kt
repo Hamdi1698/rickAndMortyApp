@@ -4,7 +4,7 @@ package com.rickandmortyapp.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.rickandmortyapp.model.Character
+import com.rickandmortyapp.model.kk.Character
 import com.rickandmortyapp.databinding.CardRecyclerRowBinding
 import com.squareup.picasso.Picasso
 

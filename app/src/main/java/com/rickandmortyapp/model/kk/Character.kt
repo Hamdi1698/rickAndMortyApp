@@ -1,4 +1,4 @@
-package com.rickandmortyapp.model
+package com.rickandmortyapp.model.kk
 
 data class Character (
     var id :Int,
