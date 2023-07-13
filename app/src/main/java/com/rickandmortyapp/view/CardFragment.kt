@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.adapters.CardViewBindingAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -49,9 +50,11 @@ class CardFragment : Fragment() {
         sharedViewModel.listCharacters.observe(viewLifecycleOwner, Observer { response ->
             if (response.isSuccessful) {
                 Log.d("Result", response.body()?.results.toString())
+
             } else {
                 Log.d("Results Error", response.code().toString())
             }
+
         })
 
         binding.apply {
@@ -61,6 +64,9 @@ class CardFragment : Fragment() {
                 findNavController().navigate(R.id.action_cardFragment_to_filterFragment3)
             }
         }
+
+
+
     }
 
     override fun onDestroyView() {
