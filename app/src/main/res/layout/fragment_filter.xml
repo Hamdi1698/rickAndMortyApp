@@ -9,10 +9,11 @@
 
     </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FilterFragment">
+    tools:context=".view.FilterFragment"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView"
@@ -33,9 +34,9 @@
         android:id="@+id/chipGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="80dp"
         android:layout_marginEnd="10dp"
-        android:foregroundGravity="center|center_horizontal"
+        android:foregroundGravity="center"
         app:flow_horizontalAlign="center"
         app:flow_verticalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +62,7 @@
         </com.google.android.material.chip.Chip>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/filter_gendergl">
@@ -132,6 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="APPLY"
+        android:layout_marginStart="155dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chipGroup2">
@@ -139,5 +141,5 @@
     </Button>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 </layout>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.rickandmortyapp.databinding.ActivityMainBinding
+import com.rickandmortyapp.view.FilterFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragmentContainerView)as NavHostFragment

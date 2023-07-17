@@ -1,9 +1,12 @@
-package com.rickandmortyapp.model
+package com.rickandmortyapp.model.locationmodel
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
-data class ResultX(
+@Parcelize
+data class ResultLocation(
     @SerializedName("created")
     val created: String,
     @SerializedName("dimension")
@@ -18,4 +21,4 @@ data class ResultX(
     val type: String,
     @SerializedName("url")
     val url: String
-)
+):Parcelable

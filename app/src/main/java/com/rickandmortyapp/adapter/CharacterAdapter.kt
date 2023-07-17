@@ -3,21 +3,29 @@ package com.rickandmortyapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.rickandmortyapp.model.kk.Character
 import com.rickandmortyapp.databinding.CardRecyclerRowBinding
+import com.rickandmortyapp.model.Results
+import com.rickandmortyapp.view.CardFragmentDirections
 import com.squareup.picasso.Picasso
 
 
 class CharacterAdapter: RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
-    private var listCharacters = emptyList<Character>()
+    private var resultsCharacter = emptyList<Results>()
 
     class  CharacterViewHolder(private val binding: CardRecyclerRowBinding ):RecyclerView.ViewHolder(binding.root){
-   fun bind(character: Character){
-        binding.CardName.text = character.name
-       binding.CardName2.text = character.species
-       Picasso.get().load(character.image).into(binding.cardImage)
+   fun bind(result: Results){
+       binding.CardName.text = result.name
+       binding.CardName2.text = result.species
+       Picasso.get().load(result.image).into(binding.cardimage)
+
+       itemView.setOnClickListener{view ->
+           val action =CardFragmentDirections.actionCardFragmentToCardDetailFragment(characterss = result)
+           view.findNavController().navigate(action)
+
+       }
 
 
         }
@@ -30,18 +38,16 @@ class CharacterAdapter: RecyclerView.Adapter<CharacterAdapter.CharacterViewHolde
     }
 
     override fun getItemCount(): Int {
-        return  listCharacters.size
+        return  resultsCharacter.size
 
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
-        holder.bind(listCharacters[position])
-        holder.itemView.setOnClickListener {
+        holder.bind(resultsCharacter[position])
 
-        }
     }
-    fun setCharacters(characters:List<Character>){
-        listCharacters = characters
+    fun setCharacters(characters:List<Results>){
+        resultsCharacter = characters
         notifyDataSetChanged()
     }
 }

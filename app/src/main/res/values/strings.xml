@@ -18,6 +18,7 @@
     <string name="species8">Alien Parasites</string>
     <string name="buton">Apply</string>
     <string name="Filter">Filter By Name</string>
-
+    <string name="txtapierror">bAĞLANTINIZI KONTROL EDİNİZ.</string>
+    <string name="Not_Found">Can not found Type</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

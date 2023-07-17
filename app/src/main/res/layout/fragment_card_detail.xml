@@ -1,138 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-
-    </data>
-<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    app:cardCornerRadius="8dp"
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="18dp"
+    android:layout_marginTop="16dp">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp">
 
-    </ImageView>
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
-
-        <TextView
-            android:id="@+id/Nametext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textAlignment="center"
-            android:gravity="center">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailimage">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/Nametext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Informations"
+                android:textStyle="bold"
+                android:textSize="18sp">
+
+            </TextView>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_marginStart="30dp"
+            android:gravity="start"
+            android:textStyle="bold">
+
+        </TextView>
+
+            <TextView
+                android:id="@+id/Gendertext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="start">
+
+            </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_marginStart="30dp"
+            android:gravity="start"
+            android:textStyle="bold">
 
         </TextView>
         <TextView
             android:id="@+id/Statustext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Status"
-            android:textAlignment="center"
-            android:gravity="center">
+            android:layout_marginStart="30dp"
+            android:gravity="start">
 
         </TextView>
         <TextView
-            android:id="@+id/Speciestext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Species"
-            android:textAlignment="center"
-            android:gravity="center">
-
-        </TextView>
-        <TextView
-            android:id="@+id/Gendertext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gender"
-            android:textAlignment="center"
-            android:gravity="center">
-
-        </TextView>
-        <TextView
-            android:id="@+id/Episodetext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Number of Episodes"
-            android:textAlignment="center"
-            android:gravity="center">
-
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="gravity"
-            android:text="Last Seen Location"
+            android:text="Specie"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp">
+            android:layout_marginStart="30dp"
+            android:gravity="start">
 
         </TextView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="gravity"
-            android:text="Location Name">
 
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="gravity"
-            android:text="Type">
+            <TextView
+                android:id="@+id/Speciestext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="start">
 
-        </TextView>
+            </TextView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="gravity"
-            android:text="Dimesion">
-
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="gravity"
-            android:text="Number of Residents">
+            android:text="Origin"
+            android:layout_marginStart="30dp"
+            android:gravity="start"
+            android:textStyle="bold">
 
         </TextView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="gravity"
-            android:text="Last Seen Location">
+            android:id="@+id/OriginName"
+            android:layout_marginStart="30dp"
+            android:gravity="start">
 
         </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textStyle="bold"
+            android:layout_marginStart="30dp"
+            android:gravity="start">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Typetext"
+            android:layout_marginStart="30dp"
+            android:gravity="start">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Location"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="200dp"
+                app:srcCompat="@drawable/baseline_chevron_right_24" />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:gravity="start"
+            android:id="@+id/Locationtext">
+
+        </TextView>
+
 
     </LinearLayout>
 
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="440dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Episodes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="start">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EpisodesItem">
+
+            </TextView>
 
 
-</LinearLayout>
-</layout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/mük"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="0dp"
+        android:text="Go Back">
+
+    </TextView>
+    <ImageButton
+        android:id="@+id/mk"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_keyboard_arrow_left_24"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+
+    </ImageButton>
+
+
+</com.google.android.material.card.MaterialCardView>
