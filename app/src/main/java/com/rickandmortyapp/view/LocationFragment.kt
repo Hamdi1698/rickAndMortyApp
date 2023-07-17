@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.rickandmortyapp.R
 import com.rickandmortyapp.databinding.FragmentFilterBinding
+import com.rickandmortyapp.databinding.FragmentLocationBinding
 
 
 class LocationFragment : Fragment(R.layout.fragment_location) {
-    private  var _binding: FragmentFilterBinding? = null
+    private  var _binding: FragmentLocationBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +24,16 @@ class LocationFragment : Fragment(R.layout.fragment_location) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentFilterBinding.inflate(inflater,container,false)
+        _binding = FragmentLocationBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.butonummm.setOnClickListener {
+            findNavController().navigate(R.id.action_locationFragment_to_mainActivity)
+        }
+
 
 
     }
