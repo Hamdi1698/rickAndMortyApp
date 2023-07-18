@@ -2,6 +2,7 @@ package com.rickandmortyapp.view
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -45,19 +46,29 @@ class CardDetailFragment : Fragment(R.layout.fragment_card_detail) {
             Gendertext.text = character.gender
             Picasso.get().load(character.image).into(detailImage)
             OriginName.text = character.origin.name
+
+/*
             if (character.type ==""){
                 Typetext.text = getString(R.string.Not_Found)
             }else{
                 Typetext.text = character.type
             }
+
+ */
+            when {
+                character.type.isEmpty() -> Typetext.text = getString(R.string.Not_Found)
+                else -> Typetext.text = character.type
+            }
+
             Locationtext.text = character.location.name
             EpisodesItem.text = character.episode.getOrNull(7)
 
         }
-        binding.mk.setOnClickListener {
+
+        binding.backk.setOnClickListener {
             findNavController().navigate(R.id.action_cardDetailFragment_to_mainActivity)
         }
-        binding.imageView2.setOnClickListener {
+        binding.locationgo.setOnClickListener {
             findNavController().navigate(R.id.action_cardDetailFragment_to_locationFragment)
         }
 

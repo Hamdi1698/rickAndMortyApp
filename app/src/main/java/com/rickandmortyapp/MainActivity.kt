@@ -1,6 +1,7 @@
 package com.rickandmortyapp
 
 import android.os.Bundle
+import android.view.Menu
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
             popup.menuInflater.inflate(R.menu.toolbar_menu,popup.menu)
             popup.show()
             }
+
+
 
 
     }

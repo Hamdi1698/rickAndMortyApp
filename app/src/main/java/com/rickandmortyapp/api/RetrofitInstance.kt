@@ -19,7 +19,7 @@ object RetrofitInstance {
     val api: SimpleApi =
         retrofit.create(SimpleApi::class.java)
 
-    val apilocation:SimpleApiLocation =
+    val apiLocation:SimpleApiLocation =
         retrofit.create(SimpleApiLocation::class.java)
 
 
