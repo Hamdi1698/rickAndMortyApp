@@ -4,9 +4,13 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.cachedIn
 import com.rickandmortyapp.api.Repository
 import com.rickandmortyapp.model.TestResponse
 import com.rickandmortyapp.model.locationmodel.LocationData
+import com.rickandmortyapp.paging.CharacterPagingSource
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
@@ -15,6 +19,12 @@ class SharedViewModel(private val repository: Repository) : ViewModel() {
     var resultsCharacters = MutableLiveData<Response<TestResponse>>()
     var filterValue = MutableLiveData<Array<Int>>()
     var isFilter = MutableLiveData<Boolean>()
+
+    val loading = MutableLiveData<Boolean>()
+
+    val moviesList = Pager(PagingConfig(1)) {
+        CharacterPagingSource(repository)
+    }.flow.cachedIn(viewModelScope)
 
     init {
         filterValue.value = arrayOf(0, 0)
