@@ -47,7 +47,9 @@ class CardFragment : Fragment() {
         binding.apply {
         sharedViewModel.resultsCharacters.observe(viewLifecycleOwner, Observer { response ->
             if (response.isSuccessful) {
-                adapter.setCharacters(response.body()!!.results)
+                adapter.setCharacters(
+
+                        response.body()!!.results)
                 Textim.visibility = View.GONE
                 CardRecycler.visibility = View.VISIBLE
 
