@@ -7,7 +7,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.rickandmortyapp.databinding.CardRecyclerRowBinding
 import com.rickandmortyapp.model.Results
-
 import com.rickandmortyapp.view.CardFragmentDirections
 import com.squareup.picasso.Picasso
 

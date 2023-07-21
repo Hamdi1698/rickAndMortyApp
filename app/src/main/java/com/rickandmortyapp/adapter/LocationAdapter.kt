@@ -1,14 +1,12 @@
 package com.rickandmortyapp.adapter
 
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.rickandmortyapp.databinding.LocationRecyclerRowBinding
-import com.rickandmortyapp.model.locationmodel.LocationData
 import com.rickandmortyapp.model.locationmodel.Resultsss
-import com.rickandmortyapp.view.CardFragmentDirections
 import com.rickandmortyapp.view.LocationFragmentDirections
 
 

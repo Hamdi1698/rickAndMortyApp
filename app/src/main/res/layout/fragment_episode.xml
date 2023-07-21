@@ -20,6 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
@@ -32,6 +38,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.684"
             app:queryHint="@string/Filter" />
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:layout_width="match_parent"

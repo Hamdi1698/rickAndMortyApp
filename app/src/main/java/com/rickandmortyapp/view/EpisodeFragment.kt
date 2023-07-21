@@ -8,16 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.rickandmortyapp.R
 import com.rickandmortyapp.adapter.EpisodeAdapter
 import com.rickandmortyapp.api.Repository
-import com.rickandmortyapp.databinding.CardRecyclerRowBinding
-import com.rickandmortyapp.databinding.FragmentCardBinding
 import com.rickandmortyapp.databinding.FragmentEpisodeBinding
 import com.rickandmortyapp.model.episodemodel.EpisodeModel
-import com.rickandmortyapp.model.locationmodel.LocationData
 import com.rickandmortyapp.viewmodel.SharedViewModel
 import com.rickandmortyapp.viewmodel.SharedViewModelFactory
 import retrofit2.Response
@@ -70,6 +66,11 @@ class EpisodeFragment : Fragment(R.layout.fragment_episode) {
 
         }
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 }

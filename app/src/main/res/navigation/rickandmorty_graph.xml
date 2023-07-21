@@ -85,5 +85,34 @@
         <action
             android:id="@+id/action_episodeFragment_to_cardDetailFragment"
             app:destination="@id/cardDetailFragment" />
+        <action
+            android:id="@+id/action_episodeFragment_to_episodeDetailFragment"
+            app:destination="@id/episodeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeDetailFragment"
+        android:name="com.rickandmortyapp.view.EpisodeDetailFragment"
+        android:label="fragment_episode_detail2"
+        tools:layout="@layout/fragment_episode_detail2" >
+        <action
+            android:id="@+id/action_episodeDetailFragment_to_episodeFragment"
+            app:destination="@id/episodeFragment" />
+        <argument
+            android:name="episodes"
+            app:argType="com.rickandmortyapp.model.episodemodel.Resultsssss" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.rickandmortyapp.view.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_episodeFragment"
+            app:destination="@id/episodeFragment" />
     </fragment>
 </navigation>

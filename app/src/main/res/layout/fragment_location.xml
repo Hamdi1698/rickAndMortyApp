@@ -19,6 +19,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+
+
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchViewLocation"
             android:layout_width="321dp"
@@ -31,34 +43,23 @@
             app:queryHint="@string/Filter" />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButtonLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_marginStart="40dp"
-            android:src="@drawable/filter_icon"
-            app:layout_constraintBottom_toTopOf="@+id/swipeRefreshLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButtonLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/filter_icon"
+                    app:layout_constraintBottom_toTopOf="@+id/swipeRefreshLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="0dp"
-            android:text="Reset"
-            android:textColor="@color/red"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/swipeRefreshLayout2"
-            app:layout_constraintEnd_toEndOf="parent">
 
-        </TextView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:layout_width="match_parent"
