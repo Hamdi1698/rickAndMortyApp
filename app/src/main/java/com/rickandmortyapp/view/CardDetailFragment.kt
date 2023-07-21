@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.green
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rickandmortyapp.R
@@ -46,6 +47,7 @@ class CardDetailFragment : Fragment(R.layout.fragment_card_detail) {
             Gendertext.text = character.gender
             Picasso.get().load(character.image).into(detailImage)
             OriginName.text = character.origin.name
+            EpisodesItem.text =character.episode.getOrNull(character.id)
 
 /*
             if (character.type ==""){
@@ -70,6 +72,9 @@ class CardDetailFragment : Fragment(R.layout.fragment_card_detail) {
         }
         binding.locationgo.setOnClickListener {
             findNavController().navigate(R.id.action_cardDetailFragment_to_locationFragment)
+        }
+        binding.episode.setOnClickListener {
+            findNavController().navigate(R.id.action_cardDetailFragment_to_episodeFragment)
         }
 
 

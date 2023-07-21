@@ -200,7 +200,8 @@
                 android:text="Episodes"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:gravity="start">
+                android:gravity="start"
+                android:id="@+id/episode">
 
             </TextView>
             <TextView

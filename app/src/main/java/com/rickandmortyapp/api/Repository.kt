@@ -4,6 +4,7 @@ package com.rickandmortyapp.api
 
 
 import com.rickandmortyapp.model.TestResponse
+import com.rickandmortyapp.model.episodemodel.EpisodeModel
 import com.rickandmortyapp.model.locationmodel.LocationData
 import retrofit2.Response
 
@@ -24,6 +25,9 @@ class Repository {
     }
     suspend fun getLocation(page: Int):Response<LocationData> {
         return  RetrofitInstance.apiLocation.test1(page)
+    }
+    suspend fun getEpisode(page: Int):Response<EpisodeModel>{
+        return RetrofitInstance.api.testEpisode(page)
     }
 
 }

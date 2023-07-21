@@ -2,6 +2,7 @@ package com.rickandmortyapp.view
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,13 +14,16 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.rickandmortyapp.R
 import com.rickandmortyapp.adapter.CharacterAdapter
 import com.rickandmortyapp.api.Repository
+import com.rickandmortyapp.databinding.CardRecyclerRowBinding
 import com.rickandmortyapp.databinding.FragmentCardBinding
 import com.rickandmortyapp.viewmodel.SharedViewModel
 import com.rickandmortyapp.viewmodel.SharedViewModelFactory
+import kotlin.properties.Delegates
 
 class CardFragment : Fragment() {
 
     private var _binding: FragmentCardBinding? = null
+    private var sayfa:Int = 1
     private val binding get() = _binding!!
     private val sharedViewModel: SharedViewModel by activityViewModels {
         SharedViewModelFactory(Repository())
@@ -29,7 +33,6 @@ class CardFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        sharedViewModel.getCharacters(2)
     }
 
     override fun onCreateView(
@@ -48,8 +51,7 @@ class CardFragment : Fragment() {
         sharedViewModel.resultsCharacters.observe(viewLifecycleOwner, Observer { response ->
             if (response.isSuccessful) {
                 adapter.setCharacters(
-
-                        response.body()!!.results)
+                    response.body()!!.results)
                 Textim.visibility = View.GONE
                 CardRecycler.visibility = View.VISIBLE
 
@@ -68,6 +70,12 @@ class CardFragment : Fragment() {
             floatingActionButton2.setOnClickListener {
                 findNavController().navigate(R.id.action_cardFragment_to_filterFragment)
             }
+        }
+
+        sharedViewModel.getCharacters(sayfa)
+        binding.fmss.setOnClickListener {
+            sayfa++
+            if(sayfa<126){  sharedViewModel.getCharacters(sayfa) }else sharedViewModel.getCharacters(1)
         }
 
 

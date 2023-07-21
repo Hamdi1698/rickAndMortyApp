@@ -7,15 +7,17 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.rickandmortyapp.databinding.CardRecyclerRowBinding
 import com.rickandmortyapp.model.Results
-import com.rickandmortyapp.model.locationmodel.Resultsss
+
 import com.rickandmortyapp.view.CardFragmentDirections
 import com.squareup.picasso.Picasso
 
 
 class CharacterAdapter: RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
+
+
     private var resultsCharacter = emptyList<Results>()
-    private var locationss = emptyList<Resultsss>()
+
 
     class  CharacterViewHolder(private val binding: CardRecyclerRowBinding ):RecyclerView.ViewHolder(binding.root){
    fun bind(result: Results){

@@ -15,6 +15,7 @@ class CharacterPagingSource(private val repository: Repository): PagingSource<In
             val response = repository.getCharacters(currentPage)
             val data = response.body()!!.results
             val responseData = mutableListOf<Results>()
+            responseData.addAll(data)
 
 
             LoadResult.Page(
