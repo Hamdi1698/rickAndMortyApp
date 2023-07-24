@@ -6,6 +6,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -73,15 +75,17 @@ class CardFragment : Fragment() {
         }
 
         sharedViewModel.getCharacters(sayfa)
-        binding.fmss.setOnClickListener {
-            sayfa++
-            if(sayfa<126){  sharedViewModel.getCharacters(sayfa) }else sharedViewModel.getCharacters(1)
+
+        binding.toolbar.imageButtonn.setOnClickListener{
+          findNavController().navigate(R.id.action_cardFragment_to_menuFragment)
         }
 
 
 
 
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

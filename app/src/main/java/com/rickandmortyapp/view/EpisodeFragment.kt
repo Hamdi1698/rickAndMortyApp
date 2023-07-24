@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.rickandmortyapp.R
 import com.rickandmortyapp.adapter.EpisodeAdapter
@@ -64,6 +65,9 @@ class EpisodeFragment : Fragment(R.layout.fragment_episode) {
             CardRecycler2.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
             CardRecycler2.adapter = adapter
 
+        }
+        binding.toolbar.imageButtonn.setOnClickListener{
+            findNavController().navigate(R.id.action_episodeFragment_to_menuFragment)
         }
 
     }

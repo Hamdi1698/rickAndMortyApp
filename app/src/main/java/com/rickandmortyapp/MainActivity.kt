@@ -27,11 +27,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragmentContainerView)as NavHostFragment
         navController=navHostFragment.navController
 
-        binding.toolbar.imageButtonn.setOnClickListener{
-            val popup  =PopupMenu(this@MainActivity,binding.toolbar.imageButtonn)
-            popup.menuInflater.inflate(R.menu.toolbar_menu,popup.menu)
-            popup.show()
-            }
+
 
 
 

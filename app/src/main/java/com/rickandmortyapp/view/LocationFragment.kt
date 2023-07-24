@@ -67,6 +67,9 @@ class LocationFragment : Fragment(R.layout.fragment_location) {
             floatingActionButtonLocation.setOnClickListener {
                 findNavController().navigate(R.id.action_locationFragment_to_filterFragment)
             }
+            binding.toolbar.imageButtonn.setOnClickListener{
+                findNavController().navigate(R.id.action_locationFragment_to_menuFragment)
+            }
         }
 
     }

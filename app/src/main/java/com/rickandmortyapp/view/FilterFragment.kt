@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.rickandmortyapp.R
 import com.rickandmortyapp.databinding.FragmentFilterBinding
 
-class FilterFragment : Fragment(R.layout.fragment_filter){
+class FilterFragment : DialogFragment(){
     private  var _binding: FragmentFilterBinding? = null
     private val binding get() = _binding!!
 

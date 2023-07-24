@@ -41,6 +41,9 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         binding.textView7.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_episodeFragment)
         }
+        binding.toolbar.imageButtonnn.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_cardFragment)
+        }
     }
 
     override fun onDestroy() {
