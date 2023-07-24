@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rickandmortyapp.R
-import com.rickandmortyapp.databinding.FragmentFilterBinding
 import com.rickandmortyapp.databinding.FragmentLocationDetailBinding
 
 class LocationDetailFragment : Fragment() {

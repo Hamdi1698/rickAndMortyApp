@@ -2,12 +2,9 @@ package com.rickandmortyapp.view
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -16,11 +13,9 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.rickandmortyapp.R
 import com.rickandmortyapp.adapter.CharacterAdapter
 import com.rickandmortyapp.api.Repository
-import com.rickandmortyapp.databinding.CardRecyclerRowBinding
 import com.rickandmortyapp.databinding.FragmentCardBinding
 import com.rickandmortyapp.viewmodel.SharedViewModel
 import com.rickandmortyapp.viewmodel.SharedViewModelFactory
-import kotlin.properties.Delegates
 
 class CardFragment : Fragment() {
 

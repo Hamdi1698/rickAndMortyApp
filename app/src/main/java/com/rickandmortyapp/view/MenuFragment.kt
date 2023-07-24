@@ -5,10 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView.FindListener
 import androidx.navigation.fragment.findNavController
 import com.rickandmortyapp.R
-import com.rickandmortyapp.databinding.FragmentLocationBinding
 import com.rickandmortyapp.databinding.FragmentMenuBinding
 
 

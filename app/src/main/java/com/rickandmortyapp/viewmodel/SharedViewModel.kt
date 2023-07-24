@@ -10,7 +10,6 @@ import com.rickandmortyapp.api.Repository
 import com.rickandmortyapp.model.TestResponse
 import com.rickandmortyapp.model.episodemodel.EpisodeModel
 import com.rickandmortyapp.model.locationmodel.LocationData
-import com.rickandmortyapp.paging.CharacterPagingSource
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
@@ -22,9 +21,7 @@ class SharedViewModel(private val repository: Repository) : ViewModel() {
     val loaading = MutableLiveData<Boolean>()
     var getEpisodes =MutableLiveData<Response<EpisodeModel>>()
 
-    val characterList = Pager(PagingConfig(1)) {
-        CharacterPagingSource(repository)
-    }.flow.cachedIn(viewModelScope)
+
 
     init {
         filterValue.value = arrayOf(0, 0)
